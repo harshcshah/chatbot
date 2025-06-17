@@ -1,13 +1,10 @@
-import os
 import google.generativeai as genai
 
-# Load Gemini API key from environment
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# Paste your API key directly here (ONLY for testing)
+GEMINI_API_KEY = "AIzaSyD3f5eX8WXB1EuFA2ylOB4ooVW3Qb_mW5A"
 
-# Configure Gemini
 genai.configure(api_key=GEMINI_API_KEY)
 
-# Create the model (correct syntax)
 model = genai.GenerativeModel(model_name="gemini-pro")
 
 def ask_gemini(prompt):
