@@ -1,5 +1,5 @@
 import streamlit as st
-from model_handlers import openai_handler, gemini_handler, mistral_handler
+from model_handler import openai, gemini
 
 st.set_page_config(page_title="Multi-LLM Chatbot")
 st.sidebar.title("Choose an LLM Model")
