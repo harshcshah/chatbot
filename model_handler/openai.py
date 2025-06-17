@@ -1,7 +1,7 @@
 import os
 from openai import OpenAI
 
-client = OpenAI(api_key="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"
+client = OpenAI(api_key="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")
 
 def ask_openai(prompt):
     try:
