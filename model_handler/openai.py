@@ -1,7 +1,7 @@
+import os
 from openai import OpenAI
 
-# 🔐 Static API key (for test purposes only)
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 def ask_openai(prompt):
     try:
