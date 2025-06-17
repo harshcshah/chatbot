@@ -2,3 +2,4 @@ streamlit
 openai
 google-generativeai
 requests
+python-dotenv
