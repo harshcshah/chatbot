@@ -1,9 +1,10 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import os
 import google.generativeai as genai
 
-# Load from Katonic Environment
-api_key = os.getenv("GEMINI_API_KEY")
-genai.configure(api_key=api_key)
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 model = genai.GenerativeModel("gemini-pro")
 
