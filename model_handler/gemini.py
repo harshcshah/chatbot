@@ -1,11 +1,11 @@
+import os
 import google.generativeai as genai
 
-# Paste your API key directly here (ONLY for testing)
-GEMINI_API_KEY = "AIzaSyD3f5eX8WXB1EuFA2ylOB4ooVW3Qb_mW5A"
+# Load from Katonic Environment
+api_key = os.getenv("GEMINI_API_KEY")
+genai.configure(api_key=api_key)
 
-genai.configure(api_key=GEMINI_API_KEY)
-
-model = genai.GenerativeModel(model_name="gemini-pro")
+model = genai.GenerativeModel("gemini-pro")
 
 def ask_gemini(prompt):
     try:
