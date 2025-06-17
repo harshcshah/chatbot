@@ -1,18 +1,18 @@
 import os
 import google.generativeai as genai
 
-# Load Gemini API key from environment variable
+# Load Gemini API key from environment
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
-# Configure the Gemini client
+# Configure Gemini
 genai.configure(api_key=GEMINI_API_KEY)
 
-# Initialize Gemini model
-model = genai.GenerativeModel("gemini-pro")
+# Create the model (correct syntax)
+model = genai.GenerativeModel(model_name="gemini-pro")
 
 def ask_gemini(prompt):
     try:
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
-        return f"Error: {e}"
+        return f"Gemini Error: {e}"
