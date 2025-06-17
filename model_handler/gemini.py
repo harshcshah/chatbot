@@ -8,7 +8,7 @@ import google.generativeai as genai
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Use the correct model name: gemini-1.5-pro or gemini-1.0-pro
-model = genai.GenerativeModel("gemini-1.5-pro")  # ✅ Correct model name
+model = genai.GenerativeModel("gemini-1.5-flash")  # ✅ Correct model name
 
 def ask_gemini(prompt):
     try:
