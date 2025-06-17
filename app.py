@@ -10,9 +10,9 @@ user_input = st.text_input("Your question")
 
 if user_input:
     if model_choice == "OpenAI":
-        response = openai_handler.ask_openai(user_input)
+        response = openai.ask_openai(user_input)
     elif model_choice == "Gemini":
-        response = gemini_handler.ask_gemini(user_input)
+        response = gemini.ask_gemini(user_input)
     else:
         response = mistral_handler.ask_mistral(user_input)
     st.markdown(f"**Answer:** {response}")
